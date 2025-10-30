@@ -10,7 +10,7 @@
   <nav>
     <div class="container row">
       <div class="brand">
-        <img src="assets/mrit-logo.png" alt="MRIT" class="inst-logo" />
+        <img src="/assets/mrit-logo.png" alt="MRIT" class="inst-logo" />
         <strong>HealthAI</strong>
         <span class="badge">Research preview</span>
       </div>
@@ -50,7 +50,7 @@
       <section class="card">
         <h2>What the app does</h2>
         <ul class="muted">
-          <li>Preprocesses the image safely on your machine and runs the relevant model.</li>
+          <li>Preprocesses the image and calls the relevant model.</li>
           <li>Returns a <em>single top prediction</em> with short “what/why/next” notes.</li>
           <li>Designed as a <strong>triage assist</strong> to support—never replace—clinical judgment.</li>
         </ul>
@@ -85,10 +85,9 @@
   <footer class="container" style="padding-bottom:24px">
     <small>© <span id="y"></span> HealthAI • Mysuru Royal Institute of Technology.</small>
   </footer>
-  <script>
-    window.API_BASE = "";   // don't put http://127.0.0.1 or any other domain here
-  </script>
-  
+
+  <!-- Same-origin API -->
+  <script>window.API_BASE = "";</script>
   <script src="assets/app.js"></script>
 </body>
 </html>
