@@ -9,13 +9,10 @@
 <body>
   <nav>
     <div class="container row">
-      <div class="brand">
-        <img src="/assets/mrit-logo.png" alt="MRIT" class="inst-logo" />
-        <strong>HealthAI</strong>
-      </div>
+      <div class="brand"><strong>HealthAI</strong></div>
       <div>
         <a href="index.html" class="btn">Home</a>
-        <a href="lung.html" class="btn" style="margin-left:8px">Lung</a>
+        <a href="lung.html"  class="btn" style="margin-left:8px">Lung</a>
       </div>
     </div>
   </nav>
@@ -23,7 +20,7 @@
   <main class="container hero">
     <section class="card">
       <h2>🧠 Brain Tumor Screening</h2>
-      <p class="muted">Upload a brain MRI image. You’ll get one verdict with short education. (Not a diagnosis.)</p>
+      <p class="muted">Upload a brain MRI image. You’ll get a single verdict with short education. (Not a diagnosis.)</p>
 
       <div class="chips">
         <span class="chip"><i>📄</i>MRI image</span>
@@ -38,10 +35,7 @@
         <img id="preview-brain" class="preview" alt="Preview"/>
       </div>
 
-      <div style="margin-top:10px; display:flex; gap:10px; flex-wrap:wrap">
-        <button class="contrast" data-analyze="brain">Analyze Brain MRI</button>
-      </div>
-
+      <div style="margin-top:10px"><button class="contrast" data-analyze="brain">Analyze Brain MRI</button></div>
       <div class="progress"><span id="brain-bar"></span></div>
       <div id="brain-result" class="card" style="margin-top:12px">No analysis yet.</div>
     </section>
@@ -51,8 +45,7 @@
     <small>© <span id="y"></span> HealthAI.</small>
   </footer>
 
-  <!-- Same-origin API -->
   <script>window.API_BASE = "";</script>
-  <script src="assets/app.js"></script>
+  <script type="module" src="assets/app.js"></script>
 </body>
 </html>
