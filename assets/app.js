@@ -1,9 +1,17 @@
-(function(){
-  const local="http://127.0.0.1:5000";
-  const isFile=location.protocol==="file:";
-  const served=location.origin.includes("127.0.0.1:5000")||location.origin.includes("localhost:5000");
-  window.API_BASE=served?"":(isFile?local:local);
-})();
+// ---------- API base (same-origin by default) ----------
+const BASE =
+  (typeof window !== "undefined" && typeof window.API_BASE === "string")
+    ? window.API_BASE
+    : ""; // same-origin fallback
+
+export const URLS = {
+  brain: `${BASE}/api/brain/predict`,
+  lung:  `${BASE}/api/lung/predict`,
+};
+
+// Example usage from your existing code:
+// const fd = new FormData(); fd.append("image", file);
+// const res = await fetch(URLS.lung, { method: "POST", body: fd });
 
 const DEFAULT_LABELS={
   brain:["glioma","meningioma","no_tumor","pituitary"],
