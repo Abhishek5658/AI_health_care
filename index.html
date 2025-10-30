@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HealthAI — Smart Diagnostics</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <nav>
+    <div class="container row">
+      <div class="brand">
+        <img src="assets/mrit-logo.png" alt="MRIT" class="inst-logo" />
+        <strong>HealthAI</strong>
+        <span class="badge">Research preview</span>
+      </div>
+      <div>
+        <a href="brain.html" class="btn">Brain</a>
+        <a href="lung.html" class="btn" style="margin-left:8px">Lung</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- College banner -->
+  <header class="container" style="margin-top:16px">
+    <section class="card">
+      <h2 style="margin-bottom:6px">MYSURU ROYAL INSTITUTE OF TECHNOLOGY</h2>
+      <p class="muted" style="margin:0">
+        (Affiliated to VTU Belagavi, Approved by AICTE – New Delhi &amp; Govt. of Karnataka)<br/>
+        Lakshmipura Road, Palahally Post, SR Patna, Mandya – 571606.
+      </p>
+      <hr/>
+      <p><strong>Presentation on:</strong> HealthAI — AI-assisted Medical Image Screening</p>
+    </section>
+  </header>
+
+  <main class="container hero">
+    <div class="grid-2">
+      <section class="card">
+        <h1>AI-assisted medical image screening</h1>
+        <p class="muted">Upload an image and get a single, clear verdict with short educational guidance. Models run locally via Flask.</p>
+        <div style="margin-top:10px; display:flex; gap:10px; flex-wrap:wrap">
+          <a class="btn contrast" href="brain.html">Analyze Brain MRI →</a>
+          <a class="btn" href="lung.html">Analyze Chest X-ray →</a>
+        </div>
+        <hr/>
+        <div class="muted">Server health: <code id="status">checking…</code></div>
+      </section>
+
+      <section class="card">
+        <h2>What the app does</h2>
+        <ul class="muted">
+          <li>Preprocesses the image safely on your machine and runs the relevant model.</li>
+          <li>Returns a <em>single top prediction</em> with short “what/why/next” notes.</li>
+          <li>Designed as a <strong>triage assist</strong> to support—never replace—clinical judgment.</li>
+        </ul>
+        <p class="muted" style="margin-top:8px">Educational content only. Not a diagnosis or prescription.</p>
+      </section>
+    </div>
+
+    <div class="grid-2" style="margin-top:16px">
+      <section class="card">
+        <h2>Modules</h2>
+        <ul class="muted">
+          <li><strong>🧠 Brain:</strong> glioma, meningioma, pituitary, no_tumor</li>
+          <li><strong>🫁 Lung:</strong> Bacterial Pneumonia, Corona Virus Disease, Normal, Tuberculosis, Viral Pneumonia</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Team</h2>
+        <p style="margin:0"><strong>Team Name:</strong> Medinova Queens</p>
+        <p style="margin:0"><strong>Team Leader:</strong> Manjushree ML</p>
+        <p style="margin:0"><strong>Institute:</strong> Mysuru Royal Institute of Technology</p>
+        <p style="margin-top:6px"><strong>Members:</strong> Priyamvadha GP, Bhuvanakeerthi PR, Teenashree BS</p>
+      </section>
+    </div>
+
+    <section class="card" style="margin-top:16px">
+      <h2>Why this matters</h2>
+      <p class="muted">Busy clinics face long imaging queues. A fast, privacy-respecting triage layer helps surface likely risk so clinicians can focus attention where it matters most.</p>
+    </section>
+  </main>
+
+  <footer class="container" style="padding-bottom:24px">
+    <small>© <span id="y"></span> HealthAI • Mysuru Royal Institute of Technology.</small>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>
