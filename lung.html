@@ -10,7 +10,7 @@
   <nav>
     <div class="container row">
       <div class="brand">
-        <img src="assets/mrit-logo.png" alt="MRIT" class="inst-logo" />
+        <img src="/assets/mrit-logo.png" alt="MRIT" class="inst-logo" />
         <strong>HealthAI</strong>
       </div>
       <div>
@@ -51,15 +51,8 @@
     <small>© <span id="y"></span> HealthAI.</small>
   </footer>
 
-  <script src="assets/app.js"></script>
-  <script>
-    // Point the UI to your Render Flask API
-    window.API_BASE = "https://healthai-backend.onrender.com";
-  </script>
-
-  <script>
-    window.API_BASE = "";   // don't put http://127.0.0.1 or any other domain here
-  </script>
+  <!-- Same-origin API -->
+  <script>window.API_BASE = "";</script>
   <script src="assets/app.js"></script>
 </body>
 </html>
